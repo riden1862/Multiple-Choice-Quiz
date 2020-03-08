@@ -49,15 +49,15 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
         lblQ3c = new javax.swing.JLabel();
         lblQ3d = new javax.swing.JLabel();
         lblQ4a = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lblQ4b = new javax.swing.JLabel();
+        lblQ4c = new javax.swing.JLabel();
+        lblQ4d = new javax.swing.JLabel();
+        lblQ5a = new javax.swing.JLabel();
+        lblQ5b = new javax.swing.JLabel();
+        lblQ5c = new javax.swing.JLabel();
+        lblQ5d = new javax.swing.JLabel();
         txtQ1answer = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        lblUserPrompt = new javax.swing.JLabel();
         txtQ2answer = new javax.swing.JTextField();
         txtQ3answer = new javax.swing.JTextField();
         txtQ4answer = new javax.swing.JTextField();
@@ -68,8 +68,13 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
         lblQ4answer = new javax.swing.JLabel();
         lblQ5answer = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        lblnumquestionsanswered = new javax.swing.JLabel();
+        lblCorrectQuestions = new javax.swing.JLabel();
+        lblTotalCorrect = new javax.swing.JLabel();
+        lblNumQuestionsAnswered = new javax.swing.JLabel();
+        questionsAnsweredTotal = new javax.swing.JLabel();
+        lblIncorrectQuestions = new javax.swing.JLabel();
+        lblTotalIncorrect = new javax.swing.JLabel();
+        lblPercentCorrect = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -128,40 +133,38 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
         lblQ4a.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
         lblQ4a.setText("a) Miniture Horse");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel2.setText("b) Pony");
+        lblQ4b.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblQ4b.setText("b) Pony");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel3.setText("c) Horse");
+        lblQ4c.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblQ4c.setText("c) Horse");
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel4.setText("d) Welsh");
+        lblQ4d.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblQ4d.setText("d) Welsh");
 
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel5.setText("a) Shoer");
+        lblQ5a.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblQ5a.setText("a) Shoer");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel6.setText("b) Farrier");
+        lblQ5b.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblQ5b.setText("b) Farrier");
 
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel7.setText("c) Smith");
+        lblQ5c.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblQ5c.setText("c) Smith");
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel8.setText("d) Shoemaker");
+        lblQ5d.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblQ5d.setText("d) Shoemaker");
 
         txtQ1answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        txtQ1answer.setText("ans");
         txtQ1answer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtQ1answerActionPerformed(evt);
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel9.setText("Enter your answer into the text fields below! Example, enter 'a'");
+        lblUserPrompt.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblUserPrompt.setText("Enter your answer into the text fields below! Example, enter 'a'");
 
         txtQ2answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        txtQ2answer.setText("ans");
         txtQ2answer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtQ2answerActionPerformed(evt);
@@ -169,7 +172,6 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
         });
 
         txtQ3answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        txtQ3answer.setText("ans");
         txtQ3answer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtQ3answerActionPerformed(evt);
@@ -177,7 +179,6 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
         });
 
         txtQ4answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        txtQ4answer.setText("ans");
         txtQ4answer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtQ4answerActionPerformed(evt);
@@ -185,7 +186,6 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
         });
 
         txtQ5answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        txtQ5answer.setText("ans");
         txtQ5answer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtQ5answerActionPerformed(evt);
@@ -193,19 +193,14 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
         });
 
         lblQ1answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        lblQ1answer.setText("right");
 
         lblQ2answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        lblQ2answer.setText("right");
 
         lblQ3answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        lblQ3answer.setText("right");
 
         lblQ4answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        lblQ4answer.setText("right");
 
         lblQ5answer.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        lblQ5answer.setText("right");
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -214,11 +209,22 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        jLabel10.setText("Correct Questions");
+        lblCorrectQuestions.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblCorrectQuestions.setText("Correct Questions");
 
-        lblnumquestionsanswered.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
-        lblnumquestionsanswered.setText("jLabel11");
+        lblTotalCorrect.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+
+        lblNumQuestionsAnswered.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblNumQuestionsAnswered.setText("Questions Answered");
+
+        questionsAnsweredTotal.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+
+        lblIncorrectQuestions.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+        lblIncorrectQuestions.setText("Incorrect Questions");
+
+        lblTotalIncorrect.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
+
+        lblPercentCorrect.setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -239,10 +245,45 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
                         .addGap(199, 199, 199)
                         .addComponent(lblSubtitle)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel9))
+                        .addComponent(lblUserPrompt))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(lblQ4a)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lblQ4b)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lblQ4c)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lblQ4d))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                            .addGap(0, 7, Short.MAX_VALUE)
+                                            .addComponent(lblQuestion1)
+                                            .addGap(32, 32, 32))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(lblQ2a)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(lblQ2b)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(lblQ2c))
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(lblQ1a, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(27, 27, 27)
+                                                    .addComponent(lblQ1b)
+                                                    .addGap(51, 51, 51)
+                                                    .addComponent(lblQ1c)
+                                                    .addGap(39, 39, 39)
+                                                    .addComponent(jLabel1)))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(lblQ2d))
+                                .addComponent(lblQuestion5))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblQ3a)
                                 .addGap(54, 54, 54)
@@ -250,68 +291,23 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
                                 .addGap(39, 39, 39)
                                 .addComponent(lblQ3c)
                                 .addGap(26, 26, 26)
-                                .addComponent(lblQ3d)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtQ3answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblQ3d))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(lblQ4a)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel4))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addGap(0, 7, Short.MAX_VALUE)
-                                                .addComponent(lblQuestion1)
-                                                .addGap(32, 32, 32))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(lblQ2a)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(lblQ2b)
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(lblQ2c))
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addGap(18, 18, 18)
-                                                        .addComponent(lblQ1a, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(27, 27, 27)
-                                                        .addComponent(lblQ1b)
-                                                        .addGap(51, 51, 51)
-                                                        .addComponent(lblQ1c)
-                                                        .addGap(39, 39, 39)
-                                                        .addComponent(jLabel1)))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                        .addComponent(lblQ2d))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(btnSubmit)
-                                        .addComponent(lblQuestion5))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(24, 24, 24)
-                                        .addComponent(jLabel10)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(lblnumquestionsanswered)))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtQ2answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtQ4answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtQ1answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(lblQ5a)
                                 .addGap(37, 37, 37)
-                                .addComponent(jLabel6)
+                                .addComponent(lblQ5b)
                                 .addGap(41, 41, 41)
-                                .addComponent(jLabel7)
+                                .addComponent(lblQ5c)
                                 .addGap(29, 29, 29)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtQ5answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(54, 54, 54)
+                                .addComponent(lblQ5d)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtQ5answer, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
+                            .addComponent(txtQ3answer)
+                            .addComponent(txtQ2answer)
+                            .addComponent(txtQ4answer)
+                            .addComponent(txtQ1answer))
+                        .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblQ1answer)
                             .addComponent(lblQ2answer)
@@ -320,8 +316,31 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
                             .addComponent(lblQ5answer)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(165, 165, 165)
-                        .addComponent(lblHeader)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                        .addComponent(lblHeader))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblNumQuestionsAnswered)
+                            .addComponent(lblCorrectQuestions)
+                            .addComponent(lblIncorrectQuestions))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(lblTotalIncorrect)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(30, 30, 30)
+                                        .addComponent(lblTotalCorrect))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(questionsAnsweredTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblPercentCorrect)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSubmit)))))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,9 +349,9 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
                 .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
+                    .addComponent(lblUserPrompt)
                     .addComponent(lblSubtitle))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(lblQuestion1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -367,27 +386,39 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblQ4a)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
+                    .addComponent(lblQ4b)
+                    .addComponent(lblQ4c)
+                    .addComponent(lblQ4d)
                     .addComponent(txtQ4answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblQ4answer))
                 .addGap(12, 12, 12)
                 .addComponent(lblQuestion5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8)
+                    .addComponent(lblQ5a)
+                    .addComponent(lblQ5b)
+                    .addComponent(lblQ5c)
+                    .addComponent(lblQ5d)
                     .addComponent(txtQ5answer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblQ5answer))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(lblnumquestionsanswered))
-                .addGap(15, 15, 15)
-                .addComponent(btnSubmit)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblCorrectQuestions)
+                            .addComponent(lblTotalCorrect)
+                            .addComponent(lblPercentCorrect))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblIncorrectQuestions)
+                            .addComponent(lblTotalIncorrect))
+                        .addGap(11, 11, 11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSubmit)
+                            .addComponent(lblNumQuestionsAnswered)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(questionsAnsweredTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)))
                 .addContainerGap())
         );
 
@@ -417,97 +448,116 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
         //Scanner keyedInput = new Scanner(System.in);
-        int ans1;
-        int ans2;
-        int ans3;
-        int ans4;
-        int ans5;
-        int totalcorrect;
-        totalcorrect = 0;
-        int totalincorrect;
-        totalincorrect = 0;
-        int numquestionsansered;
-        numquestionsanswered = 0;
+        String ans1;
+        String ans2;
+        String ans3;
+        String ans4;
+        String ans5;
+        int totalCorrect;
+        totalCorrect = 0;
+        int totalIncorrect;
+        totalIncorrect = 0;
+        int numQuestionsAnswered;
+        numQuestionsAnswered = 0;
+        double percentCorrect;
+        final int totalQuestions = 5;
         
-        ans1 = txtQ1answer.getText();
-        ans2 = txtQ2answer.getText();
-        ans3 = txtQ3answer.getText();
-        ans4 = txtQ4answer.getText();    
-        ans5 = txtQ5answer.getText();
-        
-        if (ans1.equals(B)||ans1.equals(b)){
-            totalcorrect = totalcorrect + 1;
-            numquestionsanswered = numquestionsanswered +1 ;
+   
+   //Code that all of the answer inputs will be turned to uppercase    
+        ans1 = txtQ1answer.getText().toUpperCase();
+        ans2 = txtQ2answer.getText().toUpperCase();
+        ans3 = txtQ3answer.getText().toUpperCase();
+        ans4 = txtQ4answer.getText().toUpperCase();
+        ans5 = txtQ5answer.getText().toUpperCase();
+       
+        //when answer 1 equals B 
+        if (ans1.equals("B")){
+        //for every correct answer add one to totalCorect
+            totalCorrect = totalCorrect + 1;
+        //set lblTotalCorrect to the string value of totalCorrect.
+            lblTotalCorrect.setText(String.valueOf(totalCorrect));
+        //for every question answered add one to numQuestionsAnswered
+            numQuestionsAnswered = numQuestionsAnswered + 1;
+        //set questionsAnsweredTotal to the string vlaue of numQuestionsAnswered
+            questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
+        //set lblQ1answer to output 'Correct!'  
             lblQ1answer.setText("Correct!"); 
         }
         else {
+        // set lblQ2answer to output 'incorrect'
             lblQ1answer.setText("Incorrect!");
-            totalincorrect = totalincorrect +1 ;
-           numquestionsanswered = numquestionsanswered + 1;
-           
+        //for every incorrect answer add one to the totalIncorrect
+            totalIncorrect = totalIncorrect +1 ;
+        //set lblTotalIncorrect to the string value of totalincorrect
+            lblTotalIncorrect.setText(String.valueOf(totalIncorrect));
+        //for every question answered add one to numQuestionsAnswered 
+           numQuestionsAnswered = numQuestionsAnswered + 1;
+        //set lblQ1answer to output 'Incorrect!'
+           questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
         }
-        if (ans2.equals(B)||ans2.equals(b))){
-            totalcorrect = totalcorrect + 1;
-            numquestionsanswered = numquestionsanswered + 1;
+        //When answer two equals 'B' then,
+        if (ans2.equals("B")){
+            totalCorrect = totalCorrect + 1;
+            lblTotalCorrect.setText(String.valueOf(totalCorrect));
+            numQuestionsAnswered = numQuestionsAnswered + 1;
+            questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
             lblQ2answer.setText("Correct");
         }
         else { 
             lblQ2answer.setText("Incorrect");
-            totalincorrect = totalincorrect +1;
-            numquestionsanswered = numquestionsanswered +1;
+            totalIncorrect = totalIncorrect +1;
+            lblTotalIncorrect.setText(String.valueOf(totalIncorrect));
+            numQuestionsAnswered = numQuestionsAnswered +1;
+            questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
         }
-         if (ans3.equals(B)||ans3.equals(b)){
-            totalcorrect = totalcorrect + 1;
-            numquestionsanswered = numquestionsanswered +1 ;
+         if (ans3.equals("B")){
+            totalCorrect = totalCorrect + 1;
+            lblTotalCorrect.setText(String.valueOf(totalCorrect));
+            numQuestionsAnswered = numQuestionsAnswered +1 ;
+            questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
             lblQ3answer.setText("Correct!"); 
         }
         else {
             lblQ3answer.setText("Incorrect!");
-            totalincorrect = totalincorrect +1 ;
-           numquestionsanswered = numquestionsanswered + 1;
+            totalIncorrect = totalIncorrect +1 ;
+            lblTotalIncorrect.setText(String.valueOf(totalIncorrect));
+           numQuestionsAnswered = numQuestionsAnswered + 1;
+           questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
         }
-         if (ans4.equals(B)||ans4.equals(b)){
-            totalcorrect = totalcorrect + 1;
-            numquestionsanswered = numquestionsanswered +1 ;
+         if (ans4.equals("B")){
+            totalCorrect = totalCorrect + 1;
+            lblTotalCorrect.setText(String.valueOf(totalCorrect));
+            numQuestionsAnswered = numQuestionsAnswered +1 ;
+            questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
             lblQ4answer.setText("Correct!"); 
         }
         else {
             lblQ4answer.setText("Incorrect!");
-            totalincorrect = totalincorrect +1 ;
-           numquestionsanswered = numquestionsanswered + 1;
+            totalIncorrect = totalIncorrect +1 ;
+            lblTotalIncorrect.setText(String.valueOf(totalIncorrect));
+           numQuestionsAnswered = numQuestionsAnswered + 1;
+           questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
          }
          
-          if (ans5.equals(B)||ans5.equals(b)){
-            totalcorrect = totalcorrect + 1;
-            numquestionsanswered = numquestionsanswered +1 ;
+          if (ans5.equals("B")){
+            totalCorrect = totalCorrect + 1;
+            lblTotalCorrect.setText(String.valueOf(totalCorrect));
+            numQuestionsAnswered = numQuestionsAnswered +1 ;
+            questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
             lblQ5answer.setText("Correct!"); 
         }
         else {
             lblQ5answer.setText("Incorrect!");
-            totalincorrect = totalincorrect +1 ;
-           numquestionsanswered = numquestionsanswered + 1;
+            totalIncorrect = totalIncorrect + 1; 
+            lblTotalIncorrect.setText(String.valueOf(totalIncorrect));
+           numQuestionsAnswered = numQuestionsAnswered + 1;
+           questionsAnsweredTotal.setText(String.valueOf(numQuestionsAnswered));
         }
-       //String answer;
-         //nswer = keyedInput.nextLine();
-         
-         //txtQ1answer1;
-         
-        //if (answer.equals("b"))
-        { 
-          //lblQ1answer.setText("Correct!");
-          //lblQ2answer.setText("Correct");
-          //lblQ3answer.setText("Correct");
-          //lblQ4answer.setText("Correct");
-          //lblQ5answer.setText("Correct");
-        }
-       // else
-        {
-         // lblQ1answer.setText("Wrong");
-         // lblQ2answer.setText("wrong");
-          //lblQ3answer.setText("Wrong");
-         // lblQ4answer.setText("Wrong");
-          //lblQ5answer.setText("Wrong");
-        }
+          //percent of questions correct is the value of totalCorrect as a double,
+          //divided by the value of totalQuestions as a double, multiplied by 100. 
+          percentCorrect = (Double.valueOf(totalCorrect)/Double.valueOf(totalQuestions)*100);
+          //set lblPercentCorrect to say the calculated value of percentCorrect as a %.
+          lblPercentCorrect.setText(String.valueOf(percentCorrect)+"%");
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
@@ -548,16 +598,11 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblCorrectQuestions;
     private javax.swing.JLabel lblHeader;
+    private javax.swing.JLabel lblIncorrectQuestions;
+    private javax.swing.JLabel lblNumQuestionsAnswered;
+    private javax.swing.JLabel lblPercentCorrect;
     private javax.swing.JLabel lblQ1a;
     private javax.swing.JLabel lblQ1answer;
     private javax.swing.JLabel lblQ1b;
@@ -574,14 +619,24 @@ public class MultipleChoiceQuizGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblQ3d;
     private javax.swing.JLabel lblQ4a;
     private javax.swing.JLabel lblQ4answer;
+    private javax.swing.JLabel lblQ4b;
+    private javax.swing.JLabel lblQ4c;
+    private javax.swing.JLabel lblQ4d;
+    private javax.swing.JLabel lblQ5a;
     private javax.swing.JLabel lblQ5answer;
+    private javax.swing.JLabel lblQ5b;
+    private javax.swing.JLabel lblQ5c;
+    private javax.swing.JLabel lblQ5d;
     private javax.swing.JLabel lblQuestion1;
     private javax.swing.JLabel lblQuestion2;
     private javax.swing.JLabel lblQuestion3;
     private javax.swing.JLabel lblQuestion4;
     private javax.swing.JLabel lblQuestion5;
     private javax.swing.JLabel lblSubtitle;
-    private javax.swing.JLabel lblnumquestionsanswered;
+    private javax.swing.JLabel lblTotalCorrect;
+    private javax.swing.JLabel lblTotalIncorrect;
+    private javax.swing.JLabel lblUserPrompt;
+    private javax.swing.JLabel questionsAnsweredTotal;
     private javax.swing.JTextField txtQ1answer;
     private javax.swing.JTextField txtQ2answer;
     private javax.swing.JTextField txtQ3answer;
